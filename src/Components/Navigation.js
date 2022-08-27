@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components';
 import {NavLink} from 'react-router-dom';
-import avatar from '../img/avatar.jpg';
+// import avatar from '../img/avatar.jpg';
+import SearchIcon from '@material-ui/icons/Search';
+// import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 
 function Navigation() {
     return (
         <NavigationStyled>
-            <div className="avatar">
-                <img src={avatar} alt=""/>
-            </div>
-            <ul className="nav-items">
+            <form  className="avatar">
+                <span className="searchIcon"><SearchIcon/></span>
+                <input type="text" className="search" placeholder='Search for companies'/>
+            </form>
+            {/* <ul className="nav-items">
                 <li className="nav-item">
                     <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
                 </li>
@@ -28,9 +31,17 @@ function Navigation() {
                 <li className="nav-item">
                     <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
                 </li>
-            </ul>
+            </ul> */}
+
+            {/* <div className='watchList'>
+                <div className="watchList-head">
+                    <PlayArrowRoundedIcon/>
+                    <span>First Watchlist</span>
+                </div>
+            </div> */}
+
             <footer className="footer">
-                <p>@2021 <b>Lorem Ipsum</b></p>
+                <p>@2021 <b>Biz Club IIT BHU</b></p>
             </footer>
         </NavigationStyled>
     )
@@ -43,19 +54,29 @@ const NavigationStyled = styled.nav`
     align-items: center;
     height: 100%;
     width: 100%;
+    background-color: white;
     border-right: 1px solid var(--border-color);
     .avatar{
-        width: 100%;
-        border-bottom: 1px solid var(--border-color);
-        text-align: center;
-        padding: 1rem 0;
-        img{
-            width: 70%;
-            border-radius: 50%;
-            border: 8px solid var(--border-color);
-        }
+        width:95%;
+        margin-top: 2vh;
+        height:6vh;
+        padding:1.2vh;
+        border-radius: 0.5vh;
+        box-shadow:0 0 2px 2px #dedee3;
+        font-size:1.3vw;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+       
     }
-
+    .search{
+        outline:none;
+        border:0px ;
+        margin-left:0.5vw;
+    }
+    .watchList-head{
+        background:#FFADB3;
+    }
     .nav-items{
         width: 100%;
         text-align: center;
