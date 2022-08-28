@@ -41,7 +41,7 @@ function Navigation() {
             </div> */}
 
             <footer className="footer">
-                <p>@2021 <b>Biz Club IIT BHU</b></p>
+                <p>@2022 <b>Biz Club IIT BHU</b></p>
             </footer>
         </NavigationStyled>
     )
