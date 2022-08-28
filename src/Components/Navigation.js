@@ -3,6 +3,8 @@ import styled from 'styled-components';
 // import {NavLink} from 'react-router-dom';
 // import avatar from '../img/avatar.jpg';
 import SearchIcon from '@material-ui/icons/Search';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 // import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 
 function Navigation() {
@@ -33,12 +35,15 @@ function Navigation() {
                 </li>
             </ul> */}
 
-            {/* <div className='watchList'>
+            <div className='watchList'>
                 <div className="watchList-head">
-                    <PlayArrowRoundedIcon/>
+                    {/* <PlayArrowRoundedIcon/> */}
+                    <PlayArrowIcon className='arrow'/>
                     <span>First Watchlist</span>
+                    <ArrowDropDownIcon className='down'/>
+
                 </div>
-            </div> */}
+            </div>
 
             <footer className="footer">
                 <p>@2022 <b>Biz Club IIT BHU</b></p>
@@ -77,8 +82,32 @@ const NavigationStyled = styled.nav`
         width:100%;
     }
     .watchList-head{
-        background:#FFADB3;
+        background:#FBC5CA;
+        height:5vh;
+        width:100.2%;
+        span{
+            color:black;
+            margin-left:0.5vw;
+        }
     }
+    .watchList{
+        height:100%;
+        border:2px solid #E67595;
+        border-radius:0.5vh;
+        width:90%;
+        margin:10px;
+    }
+    .arrow{
+     margin-top:0.6vh;
+    color:red;
+    text-shadow:0 0 2px 2px black;
+    }
+
+    .down{
+        margin-left:10vw;
+        color:red;
+    }
+
     .nav-items{
         width: 100%;
         text-align: center;
