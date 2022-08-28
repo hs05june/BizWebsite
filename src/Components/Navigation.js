@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import {NavLink} from 'react-router-dom';
+// import {NavLink} from 'react-router-dom';
 // import avatar from '../img/avatar.jpg';
 import SearchIcon from '@material-ui/icons/Search';
 // import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
@@ -56,23 +56,25 @@ const NavigationStyled = styled.nav`
     width: 100%;
     background-color: white;
     border-right: 1px solid var(--border-color);
+
     .avatar{
-        width:95%;
+        width:90%;
         margin-top: 2vh;
         height:6vh;
-        padding:1.2vh;
+        padding:10px;
+        padding-left:15px;
         border-radius: 0.5vh;
         box-shadow:0 0 2px 2px #dedee3;
         font-size:1.3vw;
         display:flex;
         flex-direction: row;
-        justify-content: space-evenly;
        
     }
     .search{
         outline:none;
         border:0px ;
         margin-left:0.5vw;
+        width:100%;
     }
     .watchList-head{
         background:#FFADB3;
