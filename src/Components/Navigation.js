@@ -61,6 +61,10 @@ const NavigationStyled = styled.nav`
     width: 100%;
     background-color: white;
     border-right: 1px solid var(--border-color);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        display: none;
+      }
 
     .avatar{
         width:90%;

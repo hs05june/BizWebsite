@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import BuySell from './BuySell'
+import NavigationIcon from '@material-ui/icons/Navigation';
+import Navigation from './Navigation';
+import { RotateDirection } from 'react-particles-js';
 
 const ListItem = (props) => {
     const [showBtn,toggleShowBtn] = useState(false);
@@ -16,6 +19,7 @@ const ListItem = (props) => {
         <div className="down" style={{color:'gray'}}>
             <div>{props.subtitle}</div>
             <div>{props.change}({props.percent})%</div>
+            {props.increase ? <NavigationIcon style={{color:colour}}/>:<NavigationIcon style={{color:colour,transform:'rotate(180deg)'}} />}
         </div>
         </div>
       {showBtn && <BuySell/>}
@@ -41,13 +45,6 @@ const ListStyle = styled.div`
         flex-direction: row;
         justify-content: space-between;
         padding:1px 5px;
-    }
-    .up{
-        font-size: 12px;
-    }
-    .down{
-        font-size: 7px;
-        color:gray;
     }
 `
 export default ListItem
