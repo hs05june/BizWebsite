@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import BuySell from './BuySell';
 // import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 
 function Navigation() {
@@ -37,12 +38,11 @@ function Navigation() {
 
             <div className='watchList'>
                 <div className="watchList-head">
-                    {/* <PlayArrowRoundedIcon/> */}
                     <PlayArrowIcon className='arrow'/>
-                    <span>First Watchlist</span>
+                    <div>First Watchlist</div>
                     <ArrowDropDownIcon className='down'/>
-
                 </div>
+                <BuySell/>
             </div>
 
             <footer className="footer">
@@ -73,7 +73,6 @@ const NavigationStyled = styled.nav`
         font-size:1.3vw;
         display:flex;
         flex-direction: row;
-       
     }
     .search{
         outline:none;
@@ -84,11 +83,14 @@ const NavigationStyled = styled.nav`
     .watchList-head{
         background:#FBC5CA;
         height:5vh;
-        width:100.2%;
-        span{
+        width:100%;
+        padding-top:7px;
+        div{
             color:black;
-            margin-left:0.5vw;
+            margin-left:10px;
         }
+        display:flex;
+        flex-direction: row;
     }
     .watchList{
         height:100%;
@@ -98,13 +100,12 @@ const NavigationStyled = styled.nav`
         margin:10px;
     }
     .arrow{
-     margin-top:0.6vh;
     color:red;
     text-shadow:0 0 2px 2px black;
     }
 
     .down{
-        margin-left:10vw;
+        margin-left:115px;
         color:red;
     }
 
