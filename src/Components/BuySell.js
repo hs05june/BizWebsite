@@ -11,7 +11,7 @@ function BuySell() {
 }
 
 const BuySellStyle = styled.div`
-  background:#FFF9D6;
+  background:#FCF7DA;
   padding:7px;
   width:100%;
   text-align:right;

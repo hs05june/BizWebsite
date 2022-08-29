@@ -42,7 +42,7 @@ function Navigation() {
                     <div>First Watchlist</div>
                     <ArrowDropDownIcon className='down'/>
                 </div>
-                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={false} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
             </div>
 
             <footer className="footer">
@@ -59,7 +59,7 @@ const NavigationStyled = styled.nav`
     align-items: center;
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color:  var(--background-color);
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
     &::-webkit-scrollbar {
@@ -86,6 +86,8 @@ const NavigationStyled = styled.nav`
         border:0px ;
         margin-left:0.5vw;
         width:100%;
+        background-color:  var(--background-color);
+        color:var(--font-color);
     }
     .watchList-head{
         background:#FBC5CA;
@@ -162,6 +164,7 @@ const NavigationStyled = styled.nav`
     footer{
         border-top: 1px solid var(--border-color);
         width: 100%;
+        color:var(--font-color);
         p{
             padding: 1.3rem 0;
             font-size: 1.1rem;

@@ -30,7 +30,7 @@ const TitleStyled = styled.div`
             bottom: 0;
             width: 7.4rem;
             height: .33rem;
-            background-color: var(--background-light-color-2);
+            background-color: var(--background-color-2);
             border-radius: 15px;
             left: 0;
         }

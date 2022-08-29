@@ -12,7 +12,7 @@ function ReviewItem({text}) {
 const RevivewItemStyled = styled.div`
     padding: 2rem 1rem;
     border-left: 6px solid var(--border-color);
-    background-color: var(--background-dark-grey);
+    background-color: var(--background-color-2);
     position: relative;
     width: 100%;
     &:not(:first-child){
@@ -25,7 +25,7 @@ const RevivewItemStyled = styled.div`
         border-width: .8rem;
         top: 100%;
         border-style: solid;
-        border-color: var(--background-dark-grey) transparent transparent var(--background-dark-grey);
+        border-color: var(--background-color-2) transparent transparent var(--background-color-2);
     }
     p{
         padding: 1rem 0;

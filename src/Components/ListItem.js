@@ -3,12 +3,10 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import BuySell from './BuySell'
 import NavigationIcon from '@material-ui/icons/Navigation';
-import Navigation from './Navigation';
-import { RotateDirection } from 'react-particles-js';
 
 const ListItem = (props) => {
     const [showBtn,toggleShowBtn] = useState(false);
-    const colour = props.increase ? 'green' : 'red';
+    const colour = props.increase ? '#22D37D' : 'red';
   return (
     <ListStyle >
         <div onClick={()=>toggleShowBtn(!showBtn)}>
@@ -16,7 +14,7 @@ const ListItem = (props) => {
         <div>{props.title}</div>
         <div>{props.value}</div>
         </div>
-        <div className="down" style={{color:'gray'}}>
+        <div className="down" style={{color:'#7C9AA2'}}>
             <div>{props.subtitle}</div>
             <div>{props.change}({props.percent})%</div>
             {props.increase ? <NavigationIcon style={{color:colour}}/>:<NavigationIcon style={{color:colour,transform:'rotate(180deg)'}} />}
