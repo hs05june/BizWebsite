@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import SearchIcon from '@material-ui/icons/Search';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-import BuySell from './BuySell';
+import ListItem from './ListItem';
 // import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
 
 function Navigation() {
@@ -42,7 +42,7 @@ function Navigation() {
                     <div>First Watchlist</div>
                     <ArrowDropDownIcon className='down'/>
                 </div>
-                <BuySell/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
             </div>
 
             <footer className="footer">
@@ -73,6 +73,9 @@ const NavigationStyled = styled.nav`
         font-size:1.3vw;
         display:flex;
         flex-direction: row;
+        &:focus{
+            box-shadow:0 0 2px 2px #99D5FF;
+        }
     }
     .search{
         outline:none;

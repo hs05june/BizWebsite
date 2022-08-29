@@ -13,13 +13,14 @@ function BuySell() {
 const BuySellStyle = styled.div`
   background:#FFF9D6;
   padding:7px;
+  width:100%;
   text-align:right;
     .buy,.sell{
         border-radius:5px;
         border:0px;
         color:white;
         font-weight:bold;
-        font-size:1vw;
+        font-size:17px;
         padding:3px 6px;
         margin:0 10px;
     }
