@@ -4,16 +4,14 @@ import { useEffect } from "react";
 import Sidebar from "./Components/Sidebar";
 import styled from 'styled-components';
 import HomePage from "./Pages/HomePage";
-import AboutPage from './Pages/AboutPage';
-import ResumePage from './Pages/ResumePage';
-import PortfoliosPage from './Pages/PortfoliosPage';
-import BlogsPage from './Pages/BlogsPage';
-import ContactPage from './Pages/ContactPage';
+import MarketPage from './Pages/MarketPage';
+import OrdersPage from "./Pages/OrdersPage";
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import MenuIcon from '@material-ui/icons/Menu';
 import { Route, Switch as Switching } from "react-router";
 import Switch from '@material-ui/core/Switch'
 import { IconButton } from "@material-ui/core";
+import NavBar from "./Pages/NavBar";
 
 
 function App() {
@@ -37,6 +35,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar/>
         <Sidebar navToggle={navToggle} />
 
         <div className="theme">
@@ -64,31 +63,24 @@ function App() {
         </div>
 
         <MainContentStyled>
-          <div className="lines">
-            <div className="line-1"></div>
-            <div className="line-2"></div>
-            <div className="line-3"></div>
-            <div className="line-4"></div>
-          </div>
-
           <Switching>
             <Route path="/" exact>
               <HomePage />
             </Route>
-            <Route path="/about" exact>
-              <AboutPage />
+            <Route path="/market" exact>
+              <MarketPage />
             </Route>
             <Route path="/resume" exact>
-              <ResumePage />
+              
             </Route>
             <Route path="/portfolios" exact>
-              <PortfoliosPage />
+              
             </Route>
-            <Route path="/blogs" exact>
-               <BlogsPage />
+            <Route path="/orders" exact>
+               <OrdersPage />
             </Route>
             <Route path="/contact" exact>
-              <ContactPage />
+              
             </Route>
           </Switching>
 

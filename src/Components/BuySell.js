@@ -14,7 +14,7 @@ const BuySellStyle = styled.div`
   background:#FCF7DA;
   padding:7px;
   width:100%;
-  text-align:right;
+  text-align:left;
     .buy,.sell{
         border-radius:5px;
         border:0px;

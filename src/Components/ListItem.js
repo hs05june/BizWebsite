@@ -6,7 +6,7 @@ import NavigationIcon from '@material-ui/icons/Navigation';
 
 const ListItem = (props) => {
     const [showBtn,toggleShowBtn] = useState(false);
-    const colour = props.increase ? '#22D37D' : 'red';
+    const colour = props.increase ? '#5CA818' : '#D8601D';
   return (
     <ListStyle >
         <div onClick={()=>toggleShowBtn(!showBtn)}>
@@ -38,6 +38,9 @@ const ListStyle = styled.div`
   flex-direction: column;
   width:100%;
   border-bottom: 2px solid #dedee3;
+  &:hover{
+    cursor: pointer;
+  }
     .up,.down{
         display: flex;
         flex-direction: row;

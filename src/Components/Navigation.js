@@ -1,12 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
-// import {NavLink} from 'react-router-dom';
-// import avatar from '../img/avatar.jpg';
 import SearchIcon from '@material-ui/icons/Search';
 import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ListItem from './ListItem';
-// import PlayArrowRoundedIcon from '@material-ui/icons/PlayArrowRounded';
+
 
 function Navigation() {
     return (
@@ -15,39 +13,31 @@ function Navigation() {
                 <span className="searchIcon"><SearchIcon/></span>
                 <input type="text" className="search" placeholder='Search for companies'/>
             </form>
-            {/* <ul className="nav-items">
-                <li className="nav-item">
-                    <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/about" activeClassName="active-class" exact>About</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/resume" activeClassName="active-class" exact>Resume</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/portfolios" activeClassName="active-class" exact>Portfolios</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/blogs" activeClassName="active-class" exact>Blogs</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to="/contact" activeClassName="active-class" exact>Contact</NavLink>
-                </li>
-            </ul> */}
-
             <div className='watchList'>
                 <div className="watchList-head">
                     <PlayArrowIcon className='arrow'/>
                     <div>First Watchlist</div>
                     <ArrowDropDownIcon className='down'/>
                 </div>
+                <div className='lists'>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
                 <ListItem title="abcd" increase={false} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+            </div>
             </div>
 
             <footer className="footer">
                 <p>@2022 <b>Biz Club IIT BHU</b></p>
-            </footer>
+               </footer>
         </NavigationStyled>
     )
 }
@@ -57,15 +47,20 @@ const NavigationStyled = styled.nav`
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    width: 100%;
-    background-color:  var(--background-color);
+    height: 90%;
+    width: 350px;
+    // background-color:  var(--background-color);
     border-right: 1px solid var(--border-color);
-    overflow-y: auto;
-    &::-webkit-scrollbar {
-        display: none;
+    // overflow-y: auto;
+    // margin-top:10vh;
+   
+      .lists{
+        overflow-y:scroll;
+        height: 67.5vh;
+        &::-webkit-scrollbar {
+            display: none;
+          }
       }
-
     .avatar{
         width:90%;
         margin-top: 2vh;
@@ -86,11 +81,11 @@ const NavigationStyled = styled.nav`
         border:0px ;
         margin-left:0.5vw;
         width:100%;
-        background-color:  var(--background-color);
+        background: #F6F6F6;
         color:var(--font-color);
     }
     .watchList-head{
-        background:#FBC5CA;
+        background:#E48D8D;
         height:5vh;
         width:100%;
         padding-top:7px;
@@ -165,8 +160,9 @@ const NavigationStyled = styled.nav`
         border-top: 1px solid var(--border-color);
         width: 100%;
         color:var(--font-color);
+        margin-bottom:1vh;
         p{
-            padding: 1.3rem 0;
+            padding: 0.3rem 0;
             font-size: 1.1rem;
             display: block;
             text-align: center;
