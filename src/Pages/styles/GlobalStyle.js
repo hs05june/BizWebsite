@@ -26,37 +26,75 @@ const GlobalStyle = createGlobalStyle`
     --primary-color: #007bff;
     --primary-color-light: #057FFF;
     --secondary-color: #ff7675;
-    // --background-dark-color: #F1F1F1;
-    // --background-dark-grey: #e4e4e4;
+    --background-dark-color: #F1F1F1;
+    --background-dark-grey: #e4e4e4;
     --border-color: #cbced8;
-    --background-color: #F1F1F1;
-    --background-color-2: rgba(3,127,255,.3);
+    --background-light-color: #F1F1F1;
+    --background-light-color-2: rgba(3,127,255,.3);
     --white-color: #151515;
-    // --font-light-color: #313131;
-    --font-color: #313131;
+    --font-light-color: #313131;
+    --font-dark-color: #313131;
     --font-dark-color-2: #151515;
     --sidebar-dark-color: #E4E4E4;
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --boxshadow-color:rgba(0, 0, 0, 0.329);
+    --portfolio-bgcolor:#FEFBFB;
+    --portfolio-color:rgb(0,0,0);
+    --portfolio-head:rgba(0,0,0,0.5);
+    --portfoilio-low:rgba(0,0,0,0.7);
+    --portfolio-nav: #ffffcc;
+    --background-nav-color:#F6F6F6;
+    --background-watch-heading:#E48D8D;
+    --watch-heading-color:red;
+    --list-item-background:#F1F1F1;
+    --home-color:white;
+    --navigation-background-color:#F1F1F1;
+    --buy-sell-background:#FCF7DA;
+    --mo-heading-background:#fffbf8;
+    --rocket-border:purple;
+    --text-color:rgba(0,0,0,0.5);
+    --item-background:#FEFBFB;
+    --form-input-background:#F1F1F1;
 }
+
 .dark-theme{
+    --form-input-background:#10121A;
+    --item-background:#2C2C2C;
+    --text-color:rgba(255,255,255,0.7);
+    --rocket-border:white;
+    --mo-heading-background:#101010;
+    --buy-sell-background:#383C3F;
+    --home-color:#B5B7BB;
+    --navigation-background-color:#0D0D0D;
+    --watch-heading-color:#3F8AF9;
+    --background-watch-heading:#383C3F;
     --primary-color: #007bff;
     --primary-color-light: #057FFF;
     --secondary-color: #6c757d;
-    --background-color: #10121A;
-    --background-color-2: #191D2B;
+    --background-dark-color: #10121A;
+    --background-dark-grey: #191D2B;
     --border-color: #2e344e;
-    // --background-light-color: #F1F1F1;
-    // --background-light-color-2: rgba(3,127,255,.3);
+    --background-nav-color:#1A1C1E;
+    --background-dark-color: #10121A;
+    --background-light-color: #F1F1F1;
+    --background-light-color-2: rgba(3,127,255,.3);
     --white-color: #FFF;
-    --font-color: #a4acc4;
-    // --font-dark-color: #313131;
-    // --font-dark-color-2: #151515;
+    --font-light-color: #a4acc4;
+    --font-dark-color: #313131;
+    --font-dark-color-2: #151515;
     --sidebar-dark-color: #191D2B;
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --boxshadow-color:#03045e;
+    --portfolio-bgcolor:#0F0F0F;
+    --portfolio-color:#F2F2F2;
+    --portfolio-head:rgba(120,120,120,0.5);
+    --portfoilio-low:rgb(30,40,50);
+    --portfolio-nav:#0F0F0F;
+    --list-item-background:#0D0D0D;
 }
 
 *{
@@ -172,8 +210,6 @@ h6{
 
 
 //Global Media Queries
-
-
 
 `;
 

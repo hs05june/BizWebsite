@@ -16,9 +16,8 @@ function MarketPage() {
                     <th style={{width:'10vw'}}>Value (in Cr.)</th>
                 </tr>
                 <div className='tableContent'>
-                <MarketItem name="Bharat Petroleum" ltp="335.15" change="1.00" changePercent="0.30" volume="38,31,736" value="128.819" increase={false} />
-                <MarketItem name="Bharat Petroleum" ltp="335.15" change="1.00" changePercent="0.30" volume="38,31,736" value="128.819" increase={true} />
-                <MarketItem name="Bharat Petroleum" ltp="335.15" change="1.00" changePercent="0.30" volume="38,31,736" value="128.819" increase={false} />
+                    <MarketItem name="Bharat Petroleum" ltp="335.15" change="1.00" changePercent="0.30" volume="38,31,736" value="128.819" increase={false} />
+                    <MarketItem name="Bharat Petroleum" ltp="335.15" change="1.00" changePercent="0.30" volume="38,31,736" value="128.819" increase={true} />
                 </div>
             </table>       
          </ResumePageStyled>
@@ -26,6 +25,7 @@ function MarketPage() {
 }
 const ResumePageStyled = styled.div`
 width:100%;
+// height:60vh;
 .portTable{
     margin-left: 65px;
     width: 76vw;
@@ -36,13 +36,13 @@ width:100%;
 }
 font-size:1.2vw;
 .heading{
-    background:#fffbf8;
+    background:var(--mo-heading-background);
     height: 5vh;
     width:100%;
     display:flex;
     flex-direction: row;
     align-items: center;
-    color:rgba(0,0,0,0.5);
+    color:var(--text-color);
     box-shadow:0px -1px 4px rgba(0,0,0,0.5);
     margin-bottom:0.5vh;
     z-index:10;
@@ -51,7 +51,10 @@ font-size:1.2vw;
 }
 .tableContent{
     overflow-y:scroll;
-    height:30vh;
+    height:83vh;
+    &::-webkit-scrollbar {
+        display: none;
+      }
 }
 `
 export default MarketPage

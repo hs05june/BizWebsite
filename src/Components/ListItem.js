@@ -20,7 +20,7 @@ const ListItem = (props) => {
             {props.increase ? <NavigationIcon style={{color:colour}}/>:<NavigationIcon style={{color:colour,transform:'rotate(180deg)'}} />}
         </div>
         </div>
-      {showBtn && <BuySell/>}
+      {showBtn && <BuySell use="SELL"/>}
     </ListStyle>
   )
 }
@@ -38,6 +38,7 @@ const ListStyle = styled.div`
   flex-direction: column;
   width:100%;
   border-bottom: 2px solid #dedee3;
+  background:var(--list-item-background);
   &:hover{
     cursor: pointer;
   }

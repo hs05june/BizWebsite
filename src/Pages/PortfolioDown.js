@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 
-function OrdersPage() {
+function PortfolioDown() {
     return (
         <AboutStyled>
             <table className='portTable'>
@@ -42,8 +42,7 @@ function OrdersPage() {
                     <td style={{display:'inline-block',width:'9vw',textAlign:'center'}}>330.30</td>
                     <td style={{display:'inline-block',width:'6vw',textAlign:'center'}}>17.00</td>
                     <td style={{display:'inline-block',width:'6vw',textAlign:'center'}}>1.7</td>
-                </tr> */}
-                
+                 </tr> */}
                 </div>
             </table>
         </AboutStyled>
@@ -51,7 +50,8 @@ function OrdersPage() {
 }
 
 const AboutStyled = styled.div`
-    width:75vw;
+    width:90%;
+    height:100%;
     .portTable{
         margin-left: 65px;
         width: 100%;
@@ -71,7 +71,7 @@ const AboutStyled = styled.div`
         box-shadow:0px -1px 4px rgba(0,0,0,0.5);
         margin-bottom:0.5vh;
         z-index:1;
-        top:10.2vh;
+        top:30vh;
         position:sticky;
     }
     .rocket{
@@ -106,4 +106,4 @@ const AboutStyled = styled.div`
     }
 `;
 
-export default OrdersPage
+export default PortfolioDown

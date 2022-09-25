@@ -11,12 +11,12 @@ function Navigation() {
         <NavigationStyled>
             <form  className="avatar">
                 <span className="searchIcon"><SearchIcon/></span>
-                <input type="text" className="search" placeholder='Search for companies'/>
+                <input type="text" className="searchWatch" placeholder='Search in WatchList'/>
             </form>
             <div className='watchList'>
                 <div className="watchList-head">
                     <PlayArrowIcon className='arrow'/>
-                    <div>First Watchlist</div>
+                    <div className='headingText' >First Watchlist</div>
                     <ArrowDropDownIcon className='down'/>
                 </div>
                 <div className='lists'>
@@ -25,7 +25,7 @@ function Navigation() {
                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
-                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
+                <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
                 <ListItem title="abcd" increase={true} value={330.30} subtitle="NSE" change={4.25} percent={1.30}/>
@@ -48,8 +48,8 @@ const NavigationStyled = styled.nav`
     flex-direction: column;
     align-items: center;
     height: 90%;
-    width: 350px;
-    // background-color:  var(--background-color);
+    width: 100%;
+    background:  var(--navigation-background-color);
     border-right: 1px solid var(--border-color);
     // overflow-y: auto;
     // margin-top:10vh;
@@ -76,23 +76,19 @@ const NavigationStyled = styled.nav`
             box-shadow:0 0 2px 2px #99D5FF;
         }
     }
-    .search{
+    .searchWatch{
         outline:none;
         border:0px ;
         margin-left:0.5vw;
         width:100%;
-        background: #F6F6F6;
+        background: var(--list-item-background);
         color:var(--font-color);
     }
     .watchList-head{
-        background:#E48D8D;
+        background:var(--background-watch-heading);
         height:5vh;
         width:100%;
         padding-top:7px;
-        div{
-            color:black;
-            margin-left:10px;
-        }
         display:flex;
         flex-direction: row;
     }
@@ -104,15 +100,16 @@ const NavigationStyled = styled.nav`
         margin:10px;
     }
     .arrow{
-    color:red;
+    color:var(--watch-heading-color);;
     text-shadow:0 0 2px 2px black;
     }
 
+    
     .down{
         margin-left:115px;
-        color:red;
+        color:var(--watch-heading-color);
     }
-
+    
     .nav-items{
         width: 100%;
         text-align: center;
@@ -148,14 +145,14 @@ const NavigationStyled = styled.nav`
                     z-index: -1;
                 }
             }
-
+            
             a:hover::before{
                 width: 100%;
                 height: 100%;
             }
         }
     }
-
+    
     footer{
         border-top: 1px solid var(--border-color);
         width: 100%;
@@ -168,5 +165,10 @@ const NavigationStyled = styled.nav`
             text-align: center;
         }
     }
-`;
-export default Navigation;
+    .headingText{
+        
+        margin-left:10px;
+    }
+    `;
+    export default Navigation;
+    

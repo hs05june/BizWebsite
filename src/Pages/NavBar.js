@@ -7,8 +7,10 @@ import {NavLink} from 'react-router-dom';
 // import NotificationsIcon from '@mui/icons-material/Notifications';
 // import { BiBell } from "react-icons/bi";
 import styled from 'styled-components';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-const NavBar = () => {
+import Switch from '@material-ui/core/Switch'
+const NavBar = (props) => {
   return (
     <NavBarStyled>
         <div className='nav_left'>
@@ -41,11 +43,8 @@ logo
        <li><NavLink to="/market" exact>
       <a>Market</a>
        </NavLink></li>
-       <li><NavLink to="/" exact>
+       <li><NavLink to="/watchlist" exact>
       <a>Watchlist</a>
-       </NavLink></li>
-       <li><NavLink to="/portofolio" exact>
-      <a>Portfolio</a>
        </NavLink></li>
        <li><NavLink to="/orders" exact>
       <a>Orders</a>
@@ -68,6 +67,16 @@ logo
 </div>
         </div>
 
+        <Switch 
+                  value=""
+                  checked={props.checked}
+                  inputProps={{ 'aria-label': '' }}
+                  size="medium"
+                  onClick={props.themeToggler}
+                />
+        <Brightness4Icon />
+
+
     </NavBarStyled>
   )
 }
@@ -78,7 +87,7 @@ const NavBarStyled = styled.nav`
     display: flex;
     height: 10vh;
     /* background: #000; */
-    background: #F6F6F6;
+    background: var(--background-nav-color);
     align-items: center;
     padding: 2vh 3vw;
     cursor: default;

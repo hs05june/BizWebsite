@@ -1,90 +1,73 @@
 import React from 'react'
-import styled from 'styled-components';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import GithubIcon from '@material-ui/icons/GitHub';
-import YoutubeIcon from '@material-ui/icons/YouTube';
-import Particle from '../Components/Particle';
+import { useState } from 'react';
+import NavigationIcon from '@material-ui/icons/Navigation';
 
-function HomePage() {
-    return (
-        <HomePageStyled>
-            <div className="particle-con">
-                <Particle />
-            </div>
-            <div className="typography">
-                <h1>Hi, I'm <span>Lorem Ipsum</span></h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Atque nihil voluptates ea dolore vel 
-                    repellat? Quia tenetur non quam exercitationem. Lorem ipsum dolor sit amet.
-                </p>
-                <div className="icons">
-                    <a href="https://codepen.io/pen/" className="icon i-facebook">
-                        <FacebookIcon />
-                    </a>
-                    <a href="https://codepen.io/pen/" className="icon i-github">
-                        <GithubIcon />
-                    </a>
-                    <a href="https://codepen.io/pen/" className="icon i-youtube">
-                        <YoutubeIcon />
-                    </a>
-                </div>
-            </div>
-        </HomePageStyled>
-    )
+import styled from 'styled-components';
+export const HomePage = () => {
+    const [rot, setRot] = useState(0);
+  return (
+    <Styles>
+    <div className='main'>
+        <div className="stock_name" style={{
+             color: `${rot ?"red" :"green"}`
+        }}>
+            uncunua
+        </div>
+        <div className="right">
+        <div className="stock_price" style={{
+            color: `${rot ?"red" :"green"}`,
+        }}>
+            794749
+            <span className='arrows'><NavigationIcon style={{
+                color: `${rot ?"red" :"green"}`,
+                transform: `${rot ? "rotate(180deg)" : ""}`
+            }}/>
+            </span>
+        </div>
+        <div className="button">
+            <button>Sell</button>
+        </div>
+        </div>
+    </div>
+    </Styles>
+  )
 }
 
-const HomePageStyled = styled.header`
-    width: 100%;
-    height: 100vh;
-    position: relative;
-   
-    .typography{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 80%;
+const Styles = styled.div`
+background:var(--home-color);
+.main{
+    width: 95%;
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+    font-size: 1.2vw;
+    margin-left:5%;
+}
+.stock_name{
+    font-size: 1.2rem;
+}
+.right{
+    display: inline-flex;
+    width: 30%;
+    justify-content: space-around;
+    align-items: center;
+}
+.button button{
+    padding: 0.5rem 1.2rem;
+    background: blue;
+    border:none;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    color: whitesmoke;
 
-        .icons{
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-            .icon{
-                border: 2px solid var(--border-color);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                transition: all .4s ease-in-out;
-                cursor: pointer;
-                &:hover{
-                    border: 2px solid var(--primary-color);
-                    color: var(--primary-color);
-                }
-                &:not(:last-child){
-                    margin-right: 1rem;
-                }
-                svg{
-                    margin: .5rem;
-                }
-            }
-
-            .i-youtube{
-                &:hover{
-                    border: 2px solid red;
-                    color: red;
-                }
-            }
-            .i-github{
-                &:hover{
-                    border: 2px solid #5F4687;
-                    color: #5F4687;
-                }
-            }
-        }
+}
+@media (max-width:600px) {
+    .right{
+        width: 50%;
     }
-`;
-
-export default HomePage;
+}
+`
+export default HomePage
